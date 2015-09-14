@@ -43,13 +43,19 @@ devices: see \code{\link[grDevices]{rgb}}.
 library(ggplot2)
 library(hexbin)
 
-dat <- within(data.frame(x = rnorm(10000), y = rnorm(10000)), {
-  Distance <- sqrt(x^2 + y^2)
-})
+dat <- data.frame(x = rnorm(10000), y = rnorm(10000))
 
 ggplot(dat, aes(x = x, y = y)) +
   geom_hex() + coord_fixed() +
   scale_fill_gradientn(colours = viridis(256))
+
+# using code from RColorBrewer to demo the palette
+n = 200
+image(
+  1:n,1,as.matrix(1:n)
+  ,col=viridis(n)
+  ,xlab="viridis n",ylab="",xaxt="n",yaxt="n",bty="n"
+)
 }
 \author{
 Simon Garnier: \email{garnier@njit.edu}, \href{https://twitter.com/sjmgarnier}{@sjmgarnier}
