@@ -1,8 +1,8 @@
 Package: viridis
 Type: Package
 Title: Matplotlib Default Color Map
-Version: 0.2.5
-Date: 2015-09-05
+Version: 0.3
+Date: 2015-10-02
 Authors@R: c(
       person("Simon", "Garnier", email = "garnier@njit.edu", role = c("aut", "cre")),
       person("Noam", "Ross", email = "noam.ross@gmail.com", role = c("ctb", "cph"), comment = "Continuous scale"),
@@ -18,14 +18,16 @@ License: MIT + file LICENSE
 LazyData: TRUE
 Encoding: UTF-8
 Depends: R (>= 2.10)
-Imports: stats, grDevices, ggplot2 (>= 1.0.1)
+Imports: stats, grDevices, ggplot2 (>= 1.0.1), gridExtra
 Suggests: hexbin (>= 1.27.0), scales, MASS, knitr, dichromat,
-        colorspace
+        colorspace, rasterVis, httr
 VignetteBuilder: knitr
+URL: https://github.com/sjmgarnier/viridis
+BugReports: https://github.com/sjmgarnier/viridis/issues
 NeedsCompilation: no
-Packaged: 2015-09-06 18:25:17 UTC; simon
+Packaged: 2015-10-09 22:26:13 UTC; simon
 Author: Simon Garnier [aut, cre],
   Noam Ross [ctb, cph] (Continuous scale),
   Bob Rudis [ctb, cph] (Combined scales)
 Repository: CRAN
-Date/Publication: 2015-09-14 09:12:59
+Date/Publication: 2015-10-11 10:43:25
