@@ -42,7 +42,19 @@
 #'
 #' @author Simon Garnier: \email{garnier@@njit.edu}, \href{https://twitter.com/sjmgarnier}{@@sjmgarnier}
 #'
-#' @details \code{magma()}, \code{plasma()}, and \code{inferno()} are convenience
+#' @details
+#'
+#' \if{html}{Here are the color scales:
+#'
+#'   \out{<div style="text-align: center">}\figure{viridis-scales.png}{options: style="width:750px;max-width:90\%;"}\out{</div>}
+#'
+#'   }
+#' \if{latex}{Here are the color scales:
+#'
+#'   \out{\begin{center}}\figure{viridis-scales.png}\out{\end{center}}
+#'   }
+#'
+#' \code{magma()}, \code{plasma()}, and \code{inferno()} are convenience
 #' functions for the other colormap options, which are useful the scale must
 #' be passed as a function name.
 #'
@@ -67,21 +79,23 @@
 #'   xlab = "viridis n", ylab = "", xaxt = "n", yaxt = "n", bty = "n"
 #' )
 #' @export
-#'
 viridis <- function(n, alpha = 1, begin = 0, end = 1, option = "D") {
+  if (!(begin %in% c(0, 1)) | !(end %in% c(0, 1))) {
+    stop("begin and end must be in [0,1]")
+  }
+
   option <- switch(option,
                    A = "A", magma = "A",
                    B = "B", inferno = "B",
                    C = "C", plasma = "C",
-                   D = "D", viridis = "D")
-  map <- viridis::viridis.map[viridis::viridis.map$opt == option, ]
-  loc <- seq(0, 1, length.out = 256)
-  R <- stats::splinefun(x = loc, y = map$R)
-  G <- stats::splinefun(x = loc, y = map$G)
-  B <- stats::splinefun(x = loc, y = map$B)
+                   D = "D", viridis = "D",
+                   {warning(paste0("Option '", option, "' does not exist. Defaulting to 'viridis'.")); "D"})
 
-  loc <- seq(begin, end, length.out = n)
-  grDevices::rgb(R(loc), G(loc), B(loc), alpha = alpha)
+  map <- viridis::viridis.map[viridis::viridis.map$opt == option, ]
+  map_cols <- grDevices::rgb(map$R, map$G, map$B)
+  fn_cols <- grDevices::colorRamp(map_cols, space = "Lab", interpolate = "spline")
+  cols <- fn_cols(seq(begin, end, length.out = n)) / 255
+  grDevices::rgb(cols[, 1], cols[, 2], cols[, 3], alpha = alpha)
 }
 
 
@@ -92,21 +106,17 @@ viridis <- function(n, alpha = 1, begin = 0, end = 1, option = "D") {
 #' channels of \code{n} equally spaced colors along the 'viridis' color map.
 #' \code{n = 256} by default, which corresponds to the data from the original
 #' 'viridis' color map in Matplotlib.
-#'
 viridisMap <- function(n = 256, alpha = 1, begin = 0, end = 1, option = "D") {
   option <- switch(option,
                    A = "A", magma = "A",
                    B = "B", inferno = "B",
                    C = "C", plasma = "C",
                    D = "D", viridis = "D")
-  map <- viridis::viridis.map[viridis::viridis.map$opt == option, ]
-  loc <- seq(0, 1, length.out = 256)
-  R <- stats::splinefun(x = loc, y = map$R)
-  G <- stats::splinefun(x = loc, y = map$G)
-  B <- stats::splinefun(x = loc, y = map$B)
-
-  loc <- seq(begin, end, length.out = n)
-  data.frame(R = R(loc), G = G(loc), B = B(loc), alpha = alpha)
+  map <- viridis::viridis.map[viridis::viridis.map$opt == "A", ]
+  map_cols <- grDevices::rgb(map$R, map$G, map$B)
+  fn_cols <- grDevices::colorRamp(map_cols, space = "Lab", interpolate = "spline")
+  cols <- fn_cols(seq(begin, end, length.out = n)) / 255
+  data.frame(R = cols[, 1], G = cols[, 2], B = cols[, 3], alpha = alpha)
 }
 
 #' @rdname viridis
