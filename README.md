@@ -1,7 +1,11 @@
 # viridis
 
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/viridis)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/viridis)](http://cran.rstudio.com/web/packages/viridis)
+[![cran version](http://www.r-pkg.org/badges/version/viridis)](https://cran.r-project.org/package=viridis)
+[![rstudio mirror per-month downloads](http://cranlogs.r-pkg.org/badges/viridis)](https://github.com/metacran/cranlogs.app)
+[![rstudio mirror total downloads](http://cranlogs.r-pkg.org/badges/grand-total/viridis?color=yellowgreen)](https://github.com/metacran/cranlogs.app)
+[![Travis-CI Build Status](https://travis-ci.org/hrbrmstr/viridis.svg?branch=master)](https://travis-ci.org/hrbrmstr/viridis)
+[![Coverage Status](https://img.shields.io/codecov/c/github/hrbrmstr/viridis/master.svg)](https://codecov.io/github/NA/viridis?branch=master)
+
 
 [Matplotlib](http://matplotlib.org/) recently [introduced new color maps]
 (http://matplotlib.org/style_changes.html) for their graphs. They are called
@@ -27,7 +31,7 @@ AND... they are now available for R!
 
 #### Installation
 
-`viridis 0.3.3` is now [available on CRAN](https://cran.r-project.org/package=viridis).  
+`viridis 0.3.4` is now [available on CRAN](https://cran.r-project.org/package=viridis).  
 You can install it using RStudio package manager or by typing the following line
 in your R terminal:
 
@@ -47,7 +51,7 @@ devtools::install_github("sjmgarnier/viridis")
 library(viridis)
 ```
 
-See the [vignette](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) for more details.
+See the [vignette](https://cran.r-project.org/package=viridis/vignettes/intro-to-viridis.html) for more details.
 ---
 
 #### Maintainer(s)
