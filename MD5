@@ -1,12 +1,12 @@
-a3c7228bceebec7ca4f9ce56cea70f8e *DESCRIPTION
+21db2909ab7f59bfd0995a1c177fff93 *DESCRIPTION
 78175506ab79be2bbf5136a8ea9e9485 *LICENSE
 824c5cae364250b5e85d02c966dda6eb *NAMESPACE
 af7fe2a8382e6361dba13a97f311444c *R/compatibility.R
 77e129cd1ba1bb551dae0550adb8f7f8 *R/scales.R
-1d23f55d89124e5c549fd138c11e6697 *build/vignette.rds
+b61aa8f34d09afb963a5d55160245d55 *build/vignette.rds
 0d0bd04de6b6a27d4aec3c8bb0b630cd *inst/doc/intro-to-viridis.R
 8a9e8d834e6a1f24419b01bee1319a15 *inst/doc/intro-to-viridis.Rmd
-09fc9597d32b67524149b7b25fe74210 *inst/doc/intro-to-viridis.html
+200e6abf4bcae32da8ad15fde7110424 *inst/doc/intro-to-viridis.html
 8af3e73d709dd1bf4c1accba56baf4e4 *man/figures/sample-palette.png
 ad01182d231f714fe190e09754b141df *man/figures/samplepalette.pdf
 6594cb63e87a798af0dfd498d8bc0cd5 *man/figures/viridis-scales.png
