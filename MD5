@@ -1,14 +1,14 @@
-7743d03032c6664bc09423b7191a9d03 *DESCRIPTION
+8eb7d400b7325c5a10a500f808472929 *DESCRIPTION
 78175506ab79be2bbf5136a8ea9e9485 *LICENSE
 d484785d8fd5d77f5e35af46fbdc2239 *NAMESPACE
-4a61af5533730632c0817316f53cd09e *NEWS.md
+d61c8df29b87d9c2ef228749c5d0ae41 *NEWS.md
 8c2803171e04b73b17dc256539beedd7 *R/scales.R
-48b2ed1076bc6c047ee7121cdb56d5f8 *build/vignette.rds
+efb965c6e539094970ec95e10e7729b2 *build/vignette.rds
 10c1797b98ea508b2f2010044fa91798 *data/unemp.RData
 df4e4e7b4c0a0449382fe9cba1a5bc3e *inst/CITATION
-bbb0269c58677b3b8189b70fd159f592 *inst/doc/intro-to-viridis.R
-6b0b22ad4653de96cf1257c353eeb2ae *inst/doc/intro-to-viridis.Rmd
-3316b691444683548e80380d1b3e7a15 *inst/doc/intro-to-viridis.html
+7124f9d154a934b03fce2302bfb77203 *inst/doc/intro-to-viridis.R
+13b60ba99a250668a830f42611d4bbcb *inst/doc/intro-to-viridis.Rmd
+72c7746a7b6103a42ced79e69994fa78 *inst/doc/intro-to-viridis.html
 400e46aee96bf2c6fec0a1b03e859a54 *man/figures/logo.png
 86ed1912cfb40ad8396f0ec18653874a *man/figures/maps.png
 4141bf09efedb07522b1ab9fd2b668ec *man/figures/viridis-scales.png
@@ -27,5 +27,5 @@ c7b66cf7cb87f999582716a52c0403df *tests/figs/colorandfill/g.svg
 e6991f393b4c73317a596bf6684a2f89 *tests/figs/deps.txt
 72fcc052142ad6e5c17ea2d28336b748 *tests/testthat.R
 263df75a7552c440462fca5418834009 *tests/testthat/test-viridis.R
-6b0b22ad4653de96cf1257c353eeb2ae *vignettes/intro-to-viridis.Rmd
+13b60ba99a250668a830f42611d4bbcb *vignettes/intro-to-viridis.Rmd
 8d71d7ffab9dd747cfc89444b2e18035 *vignettes/us.tmax_nohads_ll_20150219_float.tif
